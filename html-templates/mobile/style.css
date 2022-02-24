@@ -1,10 +1,12 @@
-*,
-:after,
-:before {
+* {
   margin: 0;
   padding: 0;
   text-decoration: none;
   list-style: none;
+  border-radius: 12px;
+  font-family: "General Sans", "DM Sans", sans-serif;
+  color: #200e32;
+  overflow-wrap: break-word;
 }
 
 body,
@@ -18,32 +20,31 @@ body {
   width: 100%;
   height: 100%;
   min-height: 100vh;
-  color: #200e32;
-  font-family: "General Sans", "DM Sans", sans-serif;
   font-style: normal;
   background: #fff;
 }
 body .container {
   height: 100%;
-  max-height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   background: #c5cceb;
   background: radial-gradient(circle, #b0b8d7 0%, white 85%, white 100%);
   padding: 0 16px;
 }
 body .container > * {
-  border-radius: 16px;
-  background-color: #fff;
   margin-bottom: 12px;
-  padding: 0 12px;
+  padding: 12px;
 }
 body header {
   width: 100%;
   height: 100%;
+  border-radius: 16px;
 }
 body header .header__inner {
   padding-top: 16px;
   padding-left: 0;
   padding-right: 0;
+  padding-bottom: 0;
 }
 body header .header__inner .header__title {
   display: flex;
@@ -53,8 +54,11 @@ body header .header__inner .header__title {
   font-size: 34px;
   line-height: 46px;
 }
-body header .header__inner .header__reduct-icon {
+body header .header__inner .header__redact-icon {
   vertical-align: middle;
+}
+body header .header__inner .header__redact-icon img {
+  border-radius: 0;
 }
 body header .header__inner .header__search {
   width: 100%;
@@ -70,6 +74,13 @@ body header .header__inner .header__search input {
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
+}
+body .asd {
+  background-color: #8667f2;
+}
+body .asd .asdasd {
+  background-color: #7358d1;
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
