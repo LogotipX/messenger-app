@@ -16,23 +16,19 @@ html {
 body {
   position: relative;
   width: 100%;
-  height: calc(100vh - 78px);
-  max-height: 100vh;
-  padding-bottom: 78px;
+  min-height: calc(100vh - 48px);
+  padding-bottom: 48px;
   font-style: normal;
   background: #fafaff;
   background: linear-gradient(145deg, white 0%, #d7defe 50%);
+  background-attachment: local;
 }
 body .container {
   padding: 16px 16px 0 16px;
 }
 body .container > * {
   border-radius: 12px;
-  margin-bottom: 12px;
   padding: 12px;
-}
-body .container > *:last-child {
-  margin-bottom: 0;
 }
 body header {
   width: 100%;
@@ -76,6 +72,7 @@ body .chat-list > * {
 }
 body .chat-list .chat-item {
   background-color: #fff;
+  margin-bottom: 12px;
 }
 body .chat-list .chat-item .chat-item__header {
   display: flex;
@@ -115,7 +112,7 @@ body .control-panel {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 78px;
+  height: 48px;
   background-color: #fff;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr;
