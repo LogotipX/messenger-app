@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chats</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- header-chat-room -->
+    <header class="header-chat-room">
+      <div class="container">
+        <nav class="chat-nav">
+          <li class="chat-nav__close-chat-button">
+            <!-- &lt; -->
+            <img src="../icons/arrow-left.svg" alt="" />
+          </li>
+          <li class="chat-nav__title">Chat title</li>
+          <li class="chat-nav__img"></li>
+        </nav>
+      </div>
+    </header>
+    <!-- ./header-chat-room -->
+    <!-- messages -->
+    <div class="messages">
+      <div class="container">
+        <div class="message">
+          <div class="message__author">
+            <div class="author__img"></div>
+          </div>
+          <div class="message__text child-container">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nisi
+            nulla, vehicula vitae mi in, accumsan finibus lectus. Morbi vitae
+            volutpat massa. In ut tempor nulla. Vivamus sed turpis quis sem
+            pellentesque tincidunt. Nunc blandit hendrerit ligula, vitae
+            bibendum tortor. Donec neque risus, feugiat congue gravida at,
+            facilisis nec lacus. Phasellus quis enim ante.
+          </div>
+        </div>
+        <div class="message">
+          <div class="message__author">
+            <div class="author__img"></div>
+          </div>
+          <div class="message__text child-container">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </div>
+        </div>
+        <div class="message">
+          <div class="message__author">
+            <div class="author__img"></div>
+          </div>
+          <div class="message__text child-container">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nisi
+            nulla, vehicula vitae mi in, accumsan finibus lectus. Morbi vitae
+            facilisis nec lacus. Phasellus quis enim ante.
+          </div>
+        </div>
+        <div class="message">
+          <div class="message__author">
+            <div class="author__img"></div>
+          </div>
+          <div class="message__text child-container">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nisi
+            nulla, vehicula vitae mi in, accumsan finibus lectus. Morbi vitae
+            volutpat massa. In ut tempor nulla. Vivamus sed turpis quis sem
+            bibendum tortor. Donec neque risus, feugiat congue gravida at,
+            facilisis nec lacus. Phasellus quis enim ante.
+          </div>
+        </div>
+        <div class="message">
+          <div class="message__author">
+            <div class="author__img"></div>
+          </div>
+          <div class="message__text child-container">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nisi
+            nulla, vehicula vitae mi in, accumsan finibus lectus. Morbi vitae
+            bibendum tortor. Donec neque risus, feugiat congue gravida at,
+            facilisis nec lacus. Phasellus quis enim ante.
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ./messages -->
+  </body>
+  <script>
+    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+    let vh = window.innerHeight * 0.01;
+    // Then we set the value in the --vh custom property to the root of the document
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+  </script>
+</html>
