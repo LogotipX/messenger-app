@@ -1,6 +1,7 @@
 @import "../global-style.scss";
 
 $header-chat-room-max-height: 58px;
+$send-message-panel-height: $control-panel-height;
 
 .header-chat-room {
   position: fixed;
@@ -52,7 +53,9 @@ $header-chat-room-max-height: 58px;
 .messages {
   width: 100%;
   // height: calc(100vh - $header-chat-room-max-height);
+  padding-bottom: $send-message-panel-height;
   margin-top: calc($header-chat-room-max-height + $container-pt);
+
   .message {
     display: inline-flex;
     width: calc(80% + $container-pl + $container-pr);
@@ -72,6 +75,45 @@ $header-chat-room-max-height: 58px;
     .message__text {
       margin-left: 8px;
       background-color: #fff;
+    }
+  }
+}
+
+.send-message-panel {
+  display: inline-grid;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  grid-template-columns: 1fr 8fr 1fr;
+  width: 100%;
+  height: $send-message-panel-height;
+  background-color: #fff;
+
+  text-align: center;
+
+  & > * {
+    vertical-align: middle;
+  }
+
+  .add-file-to-message {
+    *[type="file"] {
+      display: none;
+    }
+
+    label {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      cursor: pointer;
+
+      img {
+        width: 24px;
+        height: 24px;
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
   }
 }
