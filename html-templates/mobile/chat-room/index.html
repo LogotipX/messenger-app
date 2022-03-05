@@ -29,8 +29,7 @@
     </header>
     <!-- ./header-chat-room -->
     <!-- messages -->
-    <div class="messages">
-      <div class="container">
+    <div class="messages container">
         <div class="message">
           <div class="message__author">
             <div class="author__img"></div>
@@ -85,7 +84,15 @@
             facilisis nec lacus. Phasellus quis enim ante.
           </div>
         </div>
-      </div>
+        <div class="message --self-message">
+          <div class="message__author">
+            <div class="author__img"></div>
+          </div>
+          <div class="message__text child-container">
+            Self message
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </div>
+        </div>
     </div>
     <!-- ./messages -->
     <!-- send-message-panel -->
@@ -94,7 +101,7 @@
           <label for="add-file-to-message-button">
             <img src="../icons/plus.svg" alt="" />
           </label>
-          <input type="file" name="add-file-to-message-button" id="" />
+          <input type="file" name="add-file-to-message-button" id="add-file-to-message-button" />
         </div>
         <input class="message-input" type="text" placeholder="Input message" />
         <div class="send-message-button-container">

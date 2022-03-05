@@ -1,5 +1,13 @@
 @import "../global-style.scss";
 
+%message-border {
+  border-radius: 12px 12px 12px 2px;
+}
+
+%--self-message-border {
+  border-radius: 12px 12px 2px 12px;
+}
+
 $header-chat-room-max-height: 58px;
 $send-message-panel-height: $control-panel-height;
 
@@ -59,7 +67,7 @@ $send-message-panel-height: $control-panel-height;
 
   .message {
     display: inline-flex;
-    width: calc(80% + $container-pl + $container-pr);
+    width: calc(79% + $container-pl + $container-pr);
     margin-bottom: $child-mb;
 
     .message__author {
@@ -74,8 +82,23 @@ $send-message-panel-height: $control-panel-height;
     }
 
     .message__text {
+      @extend %message-border;
       margin-left: 8px;
       background-color: #fff;
+    }
+  }
+
+  .--self-message {
+    float: right;
+
+    .message__author {
+      display: none;
+    }
+
+    .message__text {
+      @extend %--self-message-border;
+      background-color: #8667f2;
+      color: #fff;
     }
   }
 }

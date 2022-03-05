@@ -10,7 +10,10 @@ $container-pt: 16px;
 $container-pr: 16px;
 $container-pl: 16px;
 $container-pb: 16px;
-$container-p: 0 $container-pr 0 $container-pb;
+%container-p {
+  padding-right: $container-pr;
+  padding-left: $container-pl;
+} 
 
 $child-pt: 12px;
 $child-pl: $child-pt;
@@ -82,7 +85,7 @@ body {
   background-attachment: fixed;
 
   .container {
-    padding: $container-p;
+    @extend %container-p;
 
     & > * {
       border-radius: $child-border-r;

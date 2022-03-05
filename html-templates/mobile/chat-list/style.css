@@ -1,3 +1,8 @@
+body .container {
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
 .page-chat-list .chat-list .chat-item .chat-item__header .chat-item__image {
   width: 64px;
   height: 64px;
@@ -29,9 +34,6 @@ body {
   background: #fafaff;
   background: linear-gradient(145deg, white 0%, #d7defe 50%);
   background-attachment: fixed;
-}
-body .container {
-  padding: 0 16px 0 16px;
 }
 body .container > * {
   border-radius: 12px;
