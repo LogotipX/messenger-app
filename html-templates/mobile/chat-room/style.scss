@@ -59,6 +59,8 @@ $send-message-panel-height: $control-panel-height;
 }
 
 .messages {
+  // display: flex;
+  // flex-direction: column-reverse;
   width: 100%;
   // height: calc(100vh - $header-chat-room-max-height);
   padding-bottom: $send-message-panel-height;
@@ -154,9 +156,10 @@ $send-message-panel-height: $control-panel-height;
     height: 40px;
     border: none;
     background-color: #f2f1f3;
+    font-size: 14px;
     margin-right: auto;
     margin-left: auto;
-    padding: 0 4px;
+    padding: 10px 4px;
 
     ::-webkit-input-placeholder {
       text-align: center;

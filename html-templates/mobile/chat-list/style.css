@@ -31,6 +31,12 @@ body {
   width: 100%;
   min-height: calc(100vh - 48px);
   font-style: normal;
+  -webkit-overflow-scrolling: touch;
+  min-height: -moz-available;
+  /* WebKit-based browsers will ignore this. */
+  min-height: -webkit-fill-available;
+  /* Mozilla-based browsers will ignore this. */
+  min-height: fill-available;
   background: #fafaff;
   background: linear-gradient(145deg, white 0%, #d7defe 50%);
   background-attachment: fixed;
