@@ -89,15 +89,20 @@
     </div>
     <!-- ./messages -->
     <!-- send-message-panel -->
-    <div class="send-message-panel">
-      <div class="add-file-to-message">
-        <label for="add-file-to-message-button">
-          <img src="../icons/plus.svg" alt="" />
-        </label>
-        <input type="file" name="add-file-to-message-button" id="" />
+      <div class="send-message-panel container">
+        <div class="add-file-to-message">
+          <label for="add-file-to-message-button">
+            <img src="../icons/plus.svg" alt="" />
+          </label>
+          <input type="file" name="add-file-to-message-button" id="" />
+        </div>
+        <input class="message-input" type="text" placeholder="Input message" />
+        <div class="send-message-button-container">
+          <button class="send-message-button">
+            <img src="../icons/microphone.svg" alt="">
+          </button>
+        </div>
       </div>
-      <input type="text" placeholder="Input message" />
-      <button>send</button>
     </div>
     <!-- ./send-message-panel -->
   </body>

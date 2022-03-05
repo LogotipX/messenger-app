@@ -11,7 +11,7 @@ $send-message-panel-height: $control-panel-height;
   max-height: $header-chat-room-max-height;
   // height: $control-panel-height;
   padding: {
-    top: 12px;
+    top: 6px;
     bottom: 6px;
   }
   background-color: #fff;
@@ -55,6 +55,7 @@ $send-message-panel-height: $control-panel-height;
   // height: calc(100vh - $header-chat-room-max-height);
   padding-bottom: $send-message-panel-height;
   margin-top: calc($header-chat-room-max-height + $container-pt);
+  overflow-y: scroll;
 
   .message {
     display: inline-flex;
@@ -80,18 +81,23 @@ $send-message-panel-height: $control-panel-height;
 }
 
 .send-message-panel {
-  display: inline-grid;
+  // display: inline-grid;
+  display: inline-flex;
+  justify-content: center;
   position: fixed;
   bottom: 0;
   left: 0;
-  grid-template-columns: 1fr 8fr 1fr;
+  // grid-template-columns: 1fr 8fr 1fr;
   width: 100%;
-  height: $send-message-panel-height;
+  // height: $send-message-panel-height;
   background-color: #fff;
-
   text-align: center;
 
+  padding-top: 7px !important;
+  padding-bottom: 7px !important;
+
   & > * {
+    border-radius: 8px !important;
     vertical-align: middle;
   }
 
@@ -114,6 +120,56 @@ $send-message-panel-height: $control-panel-height;
         margin-left: auto;
         margin-right: auto;
       }
+    }
+  }
+
+  .message-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 79%;
+    height: 40px;
+    border: none;
+    background-color: #f2f1f3;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 4px;
+
+    ::-webkit-input-placeholder {
+      text-align: center;
+    }
+
+    :-moz-placeholder {
+      /* Firefox 18- */
+      text-align: center;
+    }
+
+    ::-moz-placeholder {
+      /* Firefox 19+ */
+      text-align: center;
+    }
+
+    :-ms-input-placeholder {
+      text-align: center;
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .send-message-button-container {
+    .send-message-button {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      width: 24px;
+      text-align: center;
+      background-color: #fff;
+      border: none;
+      cursor: pointer;
     }
   }
 }
