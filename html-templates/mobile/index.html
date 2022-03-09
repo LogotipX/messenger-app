@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <iframe id="chat-list" src="./chat-list/index.html" frameborder="0"></iframe>
+    <iframe id="chat-room" src="./chat-room/index.html" frameborder="0"></iframe>
+  </body>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      list-style-type: none;
+    }
+
+    html, body {
+      width: 100%;
+      min-height: 100vh;
+      background-color: #232327;
+      overflow: hidden;
+    }
+
+    body > *:last-of-type {
+      margin-right: 0 !important;
+    }
+
+    #chat-list, #chat-room {
+      display: inline-block;
+      width: 375px;
+      height: 812px;
+      /* margin-right: 65px; */
+      /* border-right: 1px solid #232327; */
+    }
+  </style>
+</html>

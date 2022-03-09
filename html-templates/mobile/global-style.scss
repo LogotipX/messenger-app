@@ -10,6 +10,11 @@ $container-pt: 16px;
 $container-pr: 16px;
 $container-pl: 16px;
 $container-pb: 16px;
+// $container-pt: 4.2666666666666665%;
+// $container-pr: 4.2666666666666665%;
+// $container-pl: 4.2666666666666665%;
+// $container-pb: 4.2666666666666665%;
+
 %container-p {
   padding-right: $container-pr;
   padding-left: $container-pl;
@@ -42,6 +47,13 @@ $control-panel-height: 48px;
 body,
 html {
   width: 100%;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(215, 222, 254, 1) 50%
+  );
+  background-attachment: fixed;
+
 }
 
 body {
