@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "./style.scss";
 
-export function ChatsHeader() {
+export function ChatsHeader({ searchHandler }) {
   let [search, searchUpdate] = useState("");
 
-  const searchHandler = (e) => {
+  const inputHandler = (e) => {
     searchUpdate(e.target.value);
+    searchHandler(e.target.value);
   };
 
   return (
@@ -20,7 +21,7 @@ export function ChatsHeader() {
           </span>
           <div className="header__search">
             <input
-              onInput={(e) => searchHandler(e)}
+              onInput={(e) => inputHandler(e)}
               value={search}
               type="search"
               placeholder="Search by chats"
