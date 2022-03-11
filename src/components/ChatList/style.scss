@@ -1,0 +1,9 @@
+@import "/src/global-style.scss";
+
+.chat-list {
+  padding-top: $container-pt;
+
+  & > * {
+    padding-top: $child-pt;
+  }
+}

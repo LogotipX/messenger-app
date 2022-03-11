@@ -1,0 +1,18 @@
+@import "/src/global-style.scss";
+
+.control-panel {
+  display: grid;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: $control-panel-height;
+  background-color: #fff;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  align-items: center;
+  text-align: center;
+
+  overflow-y: auto; // fix for android firefox
+  -webkit-overflow-scrolling: touch;
+}

@@ -1,0 +1,48 @@
+@import "/src/global-style.scss";
+
+.chat-item {
+  display: block;
+  // background-color: #8667f2;
+  background-color: #fff;
+  // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 12px;
+
+  .chat-item__header {
+    // display: inline-flex;
+    display: flex;
+    width: 100%;
+    // background-color: #7358d1;
+    color: #fff;
+
+    .chat-item__image {
+      @extend %some-image;
+    }
+
+    .chat-item__info {
+      padding-left: $child-pl;
+      max-width: 65%;
+      // overflow-x: hidden;
+
+      & * {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .chat-item__title {
+        font-size: $child-title-size;
+        font-weight: 600;
+        line-height: 24px;
+      }
+
+      .chat-item__owner {
+        font-size: $child-subtitle-size;
+      }
+
+      .chat-item__message-preview {
+        font-size: $child-subtitle-size;
+        color: $child-subtitle-color;
+      }
+    }
+  }
+}

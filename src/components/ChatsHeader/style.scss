@@ -1,0 +1,55 @@
+@import "/src/global-style.scss";
+
+.header-chat-list {
+  width: 100%;
+  border-radius: $extern-border-r $extern-border-r 0 0;
+  padding-top: $container-pt;
+
+  .header__inner {
+    padding: {
+      top: 16px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    .header__title {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      line-height: 46px;
+
+      font: {
+        weight: 600;
+        size: $title-size;
+      }
+
+      .header__redact-icon > img {
+        vertical-align: middle;
+        border-radius: 0;
+      }
+    }
+
+    .header__search {
+      width: 100%;
+      padding-top: 10px;
+
+      input {
+        background: url("/icons/search.svg") #fff no-repeat 8px 50%;
+        text-indent: 20px;
+        border: none;
+        width: 100%;
+        border-radius: 8px;
+        padding: 9px 16px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+
+        &:focus {
+          background: #fff;
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}
