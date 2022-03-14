@@ -1,0 +1,9 @@
+.active {
+  filter: invert(50%) sepia(15%) saturate(6060%) hue-rotate(165deg)
+    brightness(105%) contrast(97%);
+}
+
+.disable {
+  filter: invert(51%) sepia(16%) saturate(377%) hue-rotate(227deg)
+    brightness(100%) contrast(89%);
+}

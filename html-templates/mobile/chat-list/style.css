@@ -24,7 +24,6 @@ body .container {
 body,
 html {
   width: 100%;
-  background: #fafaff;
   background: linear-gradient(145deg, white 0%, #d7defe 50%);
   background-attachment: fixed;
 }
@@ -65,6 +64,9 @@ body .control-panel {
   text-align: center;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+}
+body .control-panel img {
+  height: 24px;
 }
 
 .has-control-panel {

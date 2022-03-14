@@ -15,4 +15,8 @@
 
   overflow-y: auto; // fix for android firefox
   -webkit-overflow-scrolling: touch;
+
+  & img {
+    height: 24px;
+  }
 }

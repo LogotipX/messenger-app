@@ -18,7 +18,7 @@ $container-pb: 16px;
 %container-p {
   padding-right: $container-pr;
   padding-left: $container-pl;
-} 
+}
 
 $child-pt: 12px;
 $child-pl: $child-pt;
@@ -53,7 +53,6 @@ html {
     rgba(215, 222, 254, 1) 50%
   );
   background-attachment: fixed;
-
 }
 
 body {
@@ -128,6 +127,10 @@ body {
 
     overflow-y: auto; // fix for android firefox
     -webkit-overflow-scrolling: touch;
+
+    & img {
+      height: 24px;
+    }
   }
 }
 
