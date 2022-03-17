@@ -13,7 +13,7 @@ export function ChatList({ chatsArr = [], filter = "" }) {
                 chatTitle={i.chatTitle}
                 chatOwner={i.chatOwner}
                 messagePreview={i.messagePreview}
-                key={`${i.chatTitle}_${i.chatOwner}`}
+                key={Math.random()}
               />
             ) : (
               false

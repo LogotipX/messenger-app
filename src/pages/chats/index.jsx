@@ -11,6 +11,24 @@ export function Chats() {
       messagePreview:
         "Message preview. Lorem ipsum dolor sit amet, consectetur adipiscingelit.",
     },
+    {
+      chatTitle: "Chat title",
+      chatOwner: "Chat owner",
+      messagePreview:
+        "Message preview. Lorem ipsum dolor sit amet, consectetur adipiscingelit.",
+    },
+    {
+      chatTitle: "Chat title",
+      chatOwner: "Chat owner",
+      messagePreview:
+        "Message preview. Lorem ipsum dolor sit amet, consectetur adipiscingelit.",
+    },
+    {
+      chatTitle: "Chat title",
+      chatOwner: "Chat owner",
+      messagePreview:
+        "Message preview. Lorem ipsum dolor sit amet, consectetur adipiscingelit.",
+    },
   ];
 
   let [search, setSearch] = useState("");

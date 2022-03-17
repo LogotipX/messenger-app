@@ -1,15 +1,17 @@
 import React from "react";
 // eslint-disable-next-line
 import { Routes, Route, Link } from "react-router-dom";
-import { Chats } from "./pages/chats";
+import { ChatRoom } from "./pages/chat-room";
+import { Chats } from "./pages/chats/";
 
 function App() {
   return (
     <div className="App">
-      App.js
+      {/* App.js */}
       <Routes>
         <Route path="/" element={<Chats />} />
         <Route path="chat-rooms" element={<Chats />} />
+        <Route path="chat-room" element={<ChatRoom />} />
       </Routes>
       {/* <Chats /> */}
     </div>

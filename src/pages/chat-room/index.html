@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chats</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- header-chat-room -->
+
+    <!-- ./header-chat-room -->
+    <!-- messages -->
+    <div class="messages container">
+        <div class="message">
+          <div class="message__author">
+            <div class="author__img"></div>
+          </div>
+          <div class="message__text child-container">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nisi
+            nulla, vehicula vitae mi in, accumsan finibus lectus. Morbi vitae
+            volutpat massa. In ut tempor nulla. Vivamus sed turpis quis sem
+            pellentesque tincidunt. Nunc blandit hendrerit ligula, vitae
+            bibendum tortor. Donec neque risus, feugiat congue gravida at,
+            facilisis nec lacus. Phasellus quis enim ante.
+          </div>
+        </div>
+        <div class="message">
+          <div class="message__author">
+            <div class="author__img"></div>
+          </div>
+          <div class="message__text child-container">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </div>
+        </div>
+        <div class="message">
+          <div class="message__author">
+            <div class="author__img"></div>
+          </div>
+          <div class="message__text child-container">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nisi
+            nulla, vehicula vitae mi in, accumsan finibus lectus. Morbi vitae
+            facilisis nec lacus. Phasellus quis enim ante.
+          </div>
+        </div>
+        <div class="message">
+          <div class="message__author">
+            <div class="author__img"></div>
+          </div>
+          <div class="message__text child-container">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nisi
+            nulla, vehicula vitae mi in, accumsan finibus lectus. Morbi vitae
+            volutpat massa. In ut tempor nulla. Vivamus sed turpis quis sem
+            bibendum tortor. Donec neque risus, feugiat congue gravida at,
+            facilisis nec lacus. Phasellus quis enim ante.
+          </div>
+        </div>
+        <div class="message">
+          <div class="message__author">
+            <div class="author__img"></div>
+          </div>
+          <div class="message__text child-container">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nisi
+            nulla, vehicula vitae mi in, accumsan finibus lectus. Morbi vitae
+            bibendum tortor. Donec neque risus, feugiat congue gravida at,
+            facilisis nec lacus. Phasellus quis enim ante.
+          </div>
+        </div>
+        <div class="message --self-message">
+          <div class="message__author">
+            <div class="author__img"></div>
+          </div>
+          <div class="message__text child-container">
+            Self message
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </div>
+        </div>
+        <div class="message --self-message">
+          <div class="message__author">
+            <div class="author__img"></div>
+          </div>
+          <div class="message__text child-container">
+            Self message
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nisi
+            nulla, vehicula vitae mi in, accumsan finibus lectus. Morbi vitae
+            volutpat massa. In ut tempor nulla. Vivamus sed turpis quis sem
+            bibendum tortor. Donec neque risus, feugiat congue gravida at,
+            facilisis nec lacus. Phasellus quis enim ante.
+          </div>
+        </div>
+        <div class="message">
+          <div class="message__author">
+            <div class="author__img"></div>
+          </div>
+          <div class="message__text child-container">
+            Lorem ipsum
+          </div>
+        </div>
+        <div class="message --self-message">
+          <div class="message__author">
+            <div class="author__img"></div>
+          </div>
+          <div class="message__text child-container">
+            Self message
+          </div>
+        </div>
+        <!-- <div class="message --self-message">
+          <div class="message__author">
+            <div class="author__img"></div>
+          </div>
+          <div class="message__text child-container">
+            <img src="https://i.ytimg.com/vi/jvUbhRuBgUw/maxresdefault.jpg" alt="">
+          </div>
+        </div> -->
+    </div>
+    <!-- ./messages -->
+    <!-- send-message-panel -->
+      <div class="send-message-panel container">
+        <div class="add-file-to-message">
+          <label for="add-file-to-message-button">
+            <img src="../icons/plus.svg" alt="" />
+          </label>
+          <input type="file" name="add-file-to-message-button" id="add-file-to-message-button" />
+        </div>
+        <textarea class="message-input" type="text" placeholder="Input message..." maxlength="4096"></textarea>
+        <div class="send-message-button-container">
+          <button class="send-message-button">
+            <img src="../icons/microphone.svg" alt="">
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- ./send-message-panel -->
+  </body>
+  <script>
+    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+    // let vh = window.innerHeight * 0.01;
+    // Then we set the value in the --vh custom property to the root of the document
+    // document.documentElement.style.setProperty("--vh", `${vh}px`);
+
+    setTimeout(() => {
+      window.scrollTo(0, document.body.clientHeight);
+    } , 0);
+  </script>
+</html>

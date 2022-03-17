@@ -1,0 +1,221 @@
+@import "/src/global-style.scss";
+
+%message-border {
+  border-radius: 12px 12px 12px 2px;
+}
+
+%--self-message-border {
+  border-radius: 12px 12px 2px 12px;
+}
+
+$header-chat-room-max-height: 58px;
+$send-message-panel-height: $control-panel-height;
+
+.header-chat-room {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: $header-chat-room-max-height;
+  // height: $control-panel-height;
+  padding: {
+    top: 6px;
+    bottom: 6px;
+  }
+  background-color: #fff;
+
+  overflow-y: auto; // fix for android firefox
+  -webkit-overflow-scrolling: touch;
+
+  .chat-nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+    text-align: center;
+
+    .chat-nav__close-chat-button {
+      font: {
+        size: $child-title-size;
+        weight: 600;
+      }
+      margin-right: auto;
+
+      & a {
+        display: block;
+
+        & img {
+          vertical-align: middle;
+        }
+      }
+    }
+
+    .chat-nav__title {
+      font: {
+        size: $child-title-size;
+        weight: 600;
+      }
+    }
+
+    .chat-nav__img {
+      @extend %some-image;
+      width: 40px;
+      height: 40px;
+      margin-left: auto;
+    }
+  }
+}
+
+.messages {
+  // display: flex;
+  // flex-direction: column-reverse;
+  width: 100%;
+  // height: calc(100vh - $header-chat-room-max-height);
+  margin-top: $header-chat-room-max-height;
+  padding-top: $container-pt;
+  padding-bottom: $send-message-panel-height;
+  overflow-y: scroll;
+
+  /* Message block with scroll without body */
+  // margin-bottom: $send-message-panel-height;
+  // position: fixed;
+  // top: 0;
+  // right: 0;
+  // bottom: 0;
+  // left: 0;
+
+  .message {
+    display: inline-flex;
+    // width: calc(79% + $container-pl + $container-pr);
+    width: 88%;
+    margin-bottom: 8px;
+
+    .message__author {
+      margin-top: auto;
+
+      .author__img {
+        @extend %some-image;
+        width: 40px;
+        height: 40px;
+        background-color: blue;
+      }
+    }
+
+    .message__text {
+      @extend %message-border;
+      margin-left: 8px;
+      background-color: #fff;
+    }
+  }
+
+  .--self-message {
+    float: right;
+    flex-direction: row-reverse;
+
+    .message__author {
+      display: none;
+    }
+
+    .message__text {
+      @extend %--self-message-border;
+      background-color: #8667f2;
+      color: #fff;
+    }
+  }
+}
+
+.send-message-panel {
+  // display: inline-grid;
+  display: inline-flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  // grid-template-columns: 1fr 8fr 1fr;
+  width: 100%;
+  height: $send-message-panel-height;
+  background-color: #fff;
+  text-align: center;
+
+  padding-top: 7px !important;
+  padding-bottom: 7px !important;
+
+  & > * {
+    border-radius: 8px !important;
+    vertical-align: middle;
+  }
+
+  .add-file-to-message {
+    *[type="file"] {
+      display: none;
+    }
+
+    label {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      cursor: pointer;
+
+      img {
+        width: 24px;
+        height: 24px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
+  .message-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 79%;
+    // height: 40px;
+    border: none;
+    background-color: #f2f1f3;
+    font-size: 14px;
+    margin-right: auto;
+    margin-left: auto;
+    // padding: 10px 4px;
+    padding: 7px 6px;
+
+    ::-webkit-input-placeholder {
+      text-align: center;
+    }
+
+    :-moz-placeholder {
+      /* Firefox 18- */
+      text-align: center;
+    }
+
+    ::-moz-placeholder {
+      /* Firefox 19+ */
+      text-align: center;
+    }
+
+    :-ms-input-placeholder {
+      text-align: center;
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .send-message-button-container {
+    .send-message-button {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      width: 24px;
+      text-align: center;
+      background-color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}

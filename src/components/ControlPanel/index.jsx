@@ -9,12 +9,17 @@ import notificationSvg from "../../icons/notification.svg";
 import profileSvg from "../../icons/profile.svg";
 
 export function ControlPanel() {
-  const icons = [chatSvg, searchSvg, notificationSvg, profileSvg];
+  const icons = [
+    { icon: chatSvg, isActive: true },
+    { icon: searchSvg, isActive: false },
+    { icon: notificationSvg, isActive: false },
+    { icon: profileSvg, isActive: false },
+  ];
 
   return (
     <nav className="control-panel">
       {icons.map((i, idx) => (
-        <ControlPanelIcon icon={i} isActive={true} key={idx} />
+        <ControlPanelIcon icon={i.icon} isActive={i.isActive} key={idx} />
       ))}
       {/* <li className="control-pannel__chat-list">
         <img src={chatSvg} alt="" />
